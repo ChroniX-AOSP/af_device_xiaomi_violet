@@ -8,29 +8,24 @@
 # Inherit from violet device
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
-# Inherit some commom DroidX-UI stuff.
-$(call inherit-product, vendor/droidx/config/common.mk)
+# Inherit some commom AfterlifeOS stuff.
+$(call inherit-product, vendor/afterlife/config/common.mk)
 
 # MiuiCamera
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
+# AfterLife flags
+AFTERLIFE_MAINTAINER := Chronix
+AFTERLIFE_GAPPS := true
+
 #Device Props
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_ENABLE_BLUR := false
-TARGET_DEBLOAT := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_SUPPORTS_CALL_RECORDING := true
-DROIDX_BUILD_TYPE := OFFICIAL
-DROIDX_GAPPS := true
-
-# Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
-
-# Charging Animation
 TARGET_INCLUDE_PIXEL_CHARGER := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := droidx_violeT
+PRODUCT_NAME := afterlife_violet
 PRODUCT_DEVICE := violet
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 7 Pro
