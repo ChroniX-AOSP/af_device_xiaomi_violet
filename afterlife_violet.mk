@@ -9,7 +9,7 @@
 $(call inherit-product, device/xiaomi/violet/device.mk)
 
 # Inherit some commom AfterlifeOS stuff.
-$(call inherit-product, vendor/afterlife/config/common.mk)
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
 # MiuiCamera
 $(call inherit-product, vendor/MiuiCamera/config.mk)
