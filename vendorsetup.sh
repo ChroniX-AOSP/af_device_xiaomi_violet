@@ -9,9 +9,5 @@ git clone https://gitlab.com/Joker-V2/prebuilts_clang_host_linux-x86_clang-r4982
 #Firmware
 git clone https://gitlab.com/Drpto/vendor_xiaomi-firmware_violet.git -b thirteen vendor/xiaomi-firmware/violet
 
-# Device clangs stuff
-rm -rf packages/resources/devicesettings
-git clone https://github.com/LineageOS/android_packages_resources_devicesettings.git -b lineage-20.0 packages/resources/devicesettings --depth=1
-
-# Miui Camera stuff
+# MiuiCamera
 git clone https://gitlab.com/Joker-V2/android_vendor_MiuiCamera.git -b thirteen vendor/MiuiCamera

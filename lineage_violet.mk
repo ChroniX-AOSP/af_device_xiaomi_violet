@@ -14,19 +14,16 @@ $(call inherit-product, vendor/droidx/config/common.mk)
 # MiuiCamera
 $(call inherit-product, vendor/MiuiCamera/config.mk)
 
-#Device Props
+# Rising
+PRODUCT_NO_CAMERA := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+WITH_GMS := true
+
+# Device Props
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_ENABLE_BLUR := false
-TARGET_DEBLOAT := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_SUPPORTS_CALL_RECORDING := true
-DROIDX_BUILD_TYPE := OFFICIAL
-DROIDX_GAPPS := true
-
-# Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
-
-# Charging Animation
 TARGET_INCLUDE_PIXEL_CHARGER := true
 
 # Device identifier. This must come after all inclusions.
@@ -37,6 +34,8 @@ PRODUCT_MODEL := Redmi Note 7 Pro
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="violet"
+    PRODUCT_NAME="violet" \
+    RISING_CHIPSET="Snapdragon 675" \
+    RISING_MAINTAINER="Chronix"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
